@@ -22,7 +22,7 @@ public class TestClass1 {
 		Assert.assertEquals(response.statusCode(), 200);
 	}
 	
-//	@Test
+	@Test
 	public void createmyuser() {
 		String str = "{\"name\":\"LegionTech\", \"gender\":\"male\", \"email\":\"user@legiontech.com\", \"status\":\"active\"}";
 //		RestAssured.baseURI = "https://gorest.co.in/public/v2/users";
@@ -40,7 +40,7 @@ public class TestClass1 {
         Assert.assertEquals(response.jsonPath().getString("status"), "active");
 	}	
 	
-//	@Test
+	@Test
 	public void updatemyuser() {
 		String str = "{\"name\":\"LegionTechNew\"}";
 //		RestAssured.baseURI = "https://gorest.co.in/public/v2/users";
@@ -59,7 +59,7 @@ public class TestClass1 {
 //        Assert.assertEquals(response.jsonPath().getString("status"), "active");
 	}	
 	
-//	@Test
+	@Test
 	public void getPost() {
 		String token = "7647a7d121a8f84077f179e18dff8d3d5bd676adffc3da57490b031b158b46ae";
 		Response response = RestAssured.given().auth().oauth2(token).get("/posts");
@@ -67,7 +67,7 @@ public class TestClass1 {
 		System.out.println(response.getBody().asString());
 	}
 	
-//	@Test
+	@Test
 	public void InsertCommentInPost() {
 		String str = "{\"user_id\":\"1122\",\"title\":\"Post by LegionTech22\", \"body\":\"LegionTech22\"}";
 //		RestAssured.baseURI = "https://gorest.co.in/public/v2/posts";
@@ -87,7 +87,7 @@ public class TestClass1 {
 	}
 	
 
-//	@Test
+	@Test
 	public void DeleteCommentInPost() {
 		String token = "7647a7d121a8f84077f179e18dff8d3d5bd676adffc3da57490b031b158b46ae";
 		Response response = RestAssured.given().auth().oauth2(token)
